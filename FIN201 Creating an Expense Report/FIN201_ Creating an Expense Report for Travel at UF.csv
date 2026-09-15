@@ -1,0 +1,540 @@
+Name,Time (UTC),Comment,Lesson,Resolved
+jenah.george@ufl.edu,"Sep 12, 2026 3:10:23","Love the learning objective we are trying to push here. Rewrite suggestions just to be a bit clearer:
+
+
+An employee has an approved Spend Authorization for a trip to Chicago. One Expense Report has already been submitted for airfare, and the conference registration has now been charged. What can be done?
+
+Nothing. Only one Expense Report can be linked to a Spend Authorization.
+Create a new Spend Authorization for the registration.
+Submit another Expense Report for the registration and mark it as the Final Expense Report.
+Submit another Expense Report for the registration and link it to the same Spend Authorization. Additional expenses can still be submitted later.",What an Expense Report Is and Where It Fits,No
+jenah.george@ufl.edu,"Sep 12, 2026 3:02:42","More Than One Expense Report per Spend Authorization
+
+More than one Expense Report can be linked to the same Spend Authorization. You do not have to wait until the trip is complete to begin reconciling expenses.
+
+As Expense Reports are approved, the remaining balance on the Spend Authorization is reduced.
+
+Select Final Expense Report for Spend Authorization only when no additional Expense Reports will be submitted. Any remaining encumbrance will be released, the Spend Authorization will close, and the selection cannot be undone.",What an Expense Report Is and Where It Fits,No
+jenah.george@ufl.edu,"Sep 12, 2026 2:58:15","Before You Begin: Do You Need a Spend Authorization?
+
+Class A and Class B travel
+Trips that involve an overnight stay or 24 hours or more of continuous travel require prior authorization.
+
+Class C travel
+Day trips without an overnight stay do not require a Spend Authorization.
+
+International travel
+An approved Spend Authorization is required, and Workday will enforce the requirement for certain international expenses before the Expense Report can be submitted.",What an Expense Report Is and Where It Fits,No
+jenah.george@ufl.edu,"Sep 12, 2026 2:47:33","Related Tasks
+
+Use the task that matches who the Expense Report is for.
+
+Create Expense Report
+Use this task to submit your own Expense Report.
+
+Create Expense Report for Worker
+Expense Data Entry Specialists use this task to submit an Expense Report for another employee or worker.
+
+Create Expense Report for Non-Worker
+Expense Data Entry Specialists use this task to submit an Expense Report for a non-worker, such as a candidate, student, or External Committee Member.",What an Expense Report Is and Where It Fits,No
+jenah.george@ufl.edu,"Sep 12, 2026 2:45:16",can the graphic come after the text?,What an Expense Report Is and Where It Fits,No
+jenah.george@ufl.edu,"Sep 12, 2026 2:43:53","
+Step 3 — Reconcile
+Complete the Expense Report to document actual expenses, reconcile UF card charges and cash advances, and request reimbursement for eligible out-of-pocket expenses.
+
+
+The Expense Report closes the loop by documenting what actually happened after the trip.",What an Expense Report Is and Where It Fits,No
+jenah.george@ufl.edu,"Sep 12, 2026 2:43:06","Step 2 — Travel
+Complete the trip, use the appropriate payment method, and keep required receipts and supporting documentation.
+",What an Expense Report Is and Where It Fits,No
+jenah.george@ufl.edu,"Sep 12, 2026 2:42:46","Step 1 — Plan and Request
+Plan the trip and complete a Spend Authorization when required.
+
+",What an Expense Report Is and Where It Fits,No
+jenah.george@ufl.edu,"Sep 12, 2026 2:42:05",can this read stage instead of step?,What an Expense Report Is and Where It Fits,No
+jenah.george@ufl.edu,"Sep 12, 2026 2:41:13",remove,What an Expense Report Is and Where It Fits,No
+jenah.george@ufl.edu,"Sep 12, 2026 2:38:47",Belongs towards the tail end of the Spend Auth course. Too late over here,What an Expense Report Is and Where It Fits,No
+jenah.george@ufl.edu,"Sep 12, 2026 2:36:17",remove,What an Expense Report Is and Where It Fits,No
+jenah.george@ufl.edu,"Sep 12, 2026 3:25:40",you can reassign it. ,Does This Charge Belong on This Report?,No
+jenah.george@ufl.edu,"Sep 12, 2026 3:23:50","Quick Expenses
+
+A Quick Expense is a receipt captured in Workday, often through the mobile app. It can be selected when creating or adding expenses to an Expense Report.
+
+",Does This Charge Belong on This Report?,No
+jenah.george@ufl.edu,"Sep 12, 2026 3:21:49",feels out of place,Does This Charge Belong on This Report?,No
+jenah.george@ufl.edu,"Sep 12, 2026 3:24:21",This belongs wherever we start adding charges to expense lines,Does This Charge Belong on This Report?,No
+jenah.george@ufl.edu,"Sep 12, 2026 3:21:02","I think we can change this to a knowledge check.
+
+Scenario/Question: Alex uses a UF card to pay for Jordan’s airfare. Whose Expense Report should reconcile the charge?
+Answer: Jordan’s. Alex must reassign the charge to Jordan first.",Does This Charge Belong on This Report?,No
+jenah.george@ufl.edu,"Sep 12, 2026 3:28:49","I noticed that there is a knowledge check for this concept, so I would axe this section all together and replace it with:
+
+Oops — I assigned the charge to the wrong traveler. What do I do?
+
+As long as the charge has not yet been added to an Expense Report, the cardholder can reassign it to the correct traveler.
+
+Once the charge has been added to an Expense Report, it cannot be reassigned until it is removed from that report.
+
+I think we should keep it visually separate from the main explanation so it reads like a helpful exception, not another rule the learner will have to memorize.",Does This Charge Belong on This Report?,No
+jenah.george@ufl.edu,"Sep 12, 2026 3:19:49","Who Does This Charge Belong To?
+
+UF card charges initially post to the cardholder’s profile. If the cardholder purchased travel for someone else, the charge must be reassigned to the traveler before the Expense Report is created.
+
+The traveler’s Expense Report should include the expenses that belong to that traveler, even when someone else made the purchase.
+
+Before you begin: Confirm that each card charge is on the correct traveler’s profile.
+
+One Traveler per Expense Report
+
+Create a separate Expense Report for each traveler.
+
+Adding another person as an Attendee documents who participated in the expense; it does not reconcile or reimburse that person’s travel expenses.",Does This Charge Belong on This Report?,No
+jenah.george@ufl.edu,"Sep 12, 2026 3:16:20",Who Does This Charge Belong To?,Does This Charge Belong on This Report?,No
+jenah.george@ufl.edu,"Sep 12, 2026 3:13:05","These sections should be flip flopped. ""Does the charge belong on this report?"" should come before the ""Start the Report"" section, and the ""Who Does What"" should follow after What is an ER?",Does This Charge Belong on This Report?,No
+Gwynn Cadwallader,"Aug 21, 2026 19:12:56",I think we need an example here to make this stick.,Does This Charge Belong on This Report?,Yes
+jenah.george@ufl.edu,"Sep 12, 2026 3:42:26","they cannot close ER's they can save for later","Who Does What: The EDES, the Traveler, and the Approvers",No
+jenah.george@ufl.edu,"Sep 12, 2026 3:41:40",canceled or changed,"Who Does What: The EDES, the Traveler, and the Approvers",No
+jenah.george@ufl.edu,"Sep 12, 2026 3:40:47","How to use this
+Select each role to learn more about what they review and what they can do.","Who Does What: The EDES, the Traveler, and the Approvers",No
+jenah.george@ufl.edu,"Sep 12, 2026 3:39:47","I think this section could benefit from being organized around the Initiate → Review → Approve process rather than around individual roles first.
+
+Right now, the learner has to piece together how the roles fit into the overall workflow. I think it would be easier to follow if we first show the process:
+
+Initiate – Employee or EDES creates/submits the report. If an EDES submits for an employee, the employee reviews it before it moves forward.
+
+Review – ECCC reviews the report for accuracy, documentation, and compliance. Additional reviewers, such as Core Office roles, may be added when applicable.
+
+Approve – The Financial Approver reviews the funding and approves the report. Alternate routing may occur when needed.
+
+Then we can keep the role-specific detail underneath for anyone who wants to understand what each person can and cannot do.
+
+I think this would give the learner the simple process first, then the deeper role detail second, which may make the section much easier to follow.","Who Does What: The EDES, the Traveler, and the Approvers",No
+jenah.george@ufl.edu,"Sep 12, 2026 4:24:04","Since the next section is complete the header, I feel like this title or section should read; Before you get Started....",Start the Report,No
+jenah.george@ufl.edu,"Sep 12, 2026 4:22:42",Student is a type of ECM ,Start the Report,No
+jenah.george@ufl.edu,"Sep 12, 2026 4:21:56",Start from an approved Spend Authorization. Review the information that carries over and complete any remaining required fields.,Start the Report,No
+jenah.george@ufl.edu,"Sep 12, 2026 4:21:16","Start from a previous report, then review and update all information that has changed.",Start the Report,No
+jenah.george@ufl.edu,"Sep 12, 2026 4:20:52",Start with a blank Expense Report and enter the details manually.,Start the Report,No
+jenah.george@ufl.edu,"Sep 12, 2026 4:20:20","After selecting the payee, choose how you want to create the Expense Report. Available options may vary based on the task and Payee Type.",Start the Report,No
+jenah.george@ufl.edu,"Sep 12, 2026 4:15:38","International Travel for Non-Workers
+
+Workday requires an approved Spend Authorization for international expense items.
+
+Candidates cannot(bolded) hold a Spend Authorization under the Candidate payee type.
+
+Students and other guests may be reimbursed as External Committee Members (ECMs) when appropriate. If international travel requires a Spend Authorization, establish the traveler as an ECM before creating the Spend Authorization and Expense Report.
+
+Important: Select the correct Payee Type before starting the Expense Report. It cannot be changed after the report is created.",Start the Report,No
+jenah.george@ufl.edu,"Sep 12, 2026 4:11:19","I would bold ""reimburse"".
+
+For Create Expense Report for Non-Worker, I would simplify the content around two main buckets:
+
+Candidate
+
+Use for eligible candidate reimbursements.
+
+External Committee Member (ECM)
+
+Use for other eligible non-employees, including students and guests, when they need to be reimbursed for out-of-pocket expenses.
+
+I also do not think we need three separate screenshots for the non-worker task. One screenshot showing the Payee Type dropdown and the available choices would be enough, followed by the instruction to select the appropriate profile in Pay To and complete any additional required information.
+I’d keep the international/Spend Authorization nuance as a separate callout, since that is where the ECM distinction becomes important.",Start the Report,No
+jenah.george@ufl.edu,"Sep 12, 2026 4:04:50","I'd move this green box below the header ""Choose the Correct Task"" or add to it. ",Start the Report,No
+jenah.george@ufl.edu,"Sep 12, 2026 4:03:54","remove, it is duplicative of what is to follow",Start the Report,No
+jenah.george@ufl.edu,"Sep 12, 2026 4:03:26","I think bullets would be more effective here:
+Before You Begin
+
+Before creating the Expense Report, confirm that:
+
+The traveler has payment elections in Workday, when reimbursement is expected.
+Any UF card charges are on the correct traveler’s profile.
+You have the required receipts and supporting documentation.
+You have the applicable Spend Authorization information.
+You know the actual travel dates, times, destinations, and funding.
+You have personal travel dates and booking information, when applicable.
+You know any attendees or passengers who need to be listed on the applicable expenses.
+
+An keep the note right below:
+
+Attendees document who participated in an expense; they are not additional payees.",Start the Report,No
+jenah.george@ufl.edu,"Sep 12, 2026 3:55:42","If switching to bullets above, I think flip cards would work really well here because the learner needs to connect who the report is for with the exact Workday task.
+
+I’d make the front of each card the task name, and the back explain who it is for:
+
+Create Expense Report
+Use for your own expenses.
+Employee as Self
+
+Create Expense Report for Worker
+Use when creating an Expense Report for another UF employee.
+Expense Data Entry Specialist
+
+Create Expense Report for Non-Worker
+Use when creating an Expense Report for a non-worker, such as a candidate, student, or External Committee Member.
+Expense Data Entry Specialist
+
+Then underneath the cards, one short reminder:
+
+Choose the correct task before you begin. The task cannot be changed after the Expense Report is started.",Start the Report,Yes
+jenah.george@ufl.edu,"Sep 12, 2026 3:51:26","Bullets over the accordians. 
+
+Before You Begin
+
+Before creating the Expense Report, confirm that:
+
+The traveler has payment elections in Workday, when reimbursement is expected.
+Any UF card charges are on the correct traveler’s profile.
+You have the required receipts and supporting documentation.
+You have the applicable Spend Authorization information.
+You know the actual travel dates, times, destinations, and funding.
+You have personal travel dates and booking information, when applicable.
+You know the attendees or passengers who need to be listed on applicable expenses.
+
+ I’d add one small note underneath in bold or like a pro tip:
+
+Attendees document who participated in an expense; they are not additional payees.",Start the Report,Yes
+Gwynn Cadwallader,"Aug 21, 2026 19:25:07",The payee deterines which . . .  should not have a bullet. ,Start the Report,Yes
+jenah.george@ufl.edu,"Sep 12, 2026 4:52:18","I’d move this to the Receipts and Documentation section.
+
+It would flow much better there because this is really about where documentation belongs, not about completing the header itself.
+
+For when you move it....
+Attach a Document
+
+Use the Attachments tab for documents that support the Expense Report as a whole, such as a cost comparison or documentation that applies to multiple expense lines.
+
+Attach receipts and other documentation that support a specific expense directly to that expense line.",Complete the Header,No
+jenah.george@ufl.edu,"Sep 12, 2026 4:50:36","I would move Editing the Header Afterward out of Complete the Header and into After You Submit: Track, Change, and Report.
+
+Where it sits now, it interrupts the learner while they’re still trying to build the report. This content is really about what can be changed later, so it fits much better with post-submission/change guidance.
+
+Editing the Header Afterward
+
+Some header fields can still be updated after the Expense Report is created.
+
+You can edit:
+
+Spend Authorization
+Final Expense Report indicator
+Memo
+Expense Report Date
+Business Purpose
+Reimbursement Payment Type
+
+Other header fields, such as Position and Company, cannot be changed after the report is created. If those are incorrect, a new Expense Report may be required.",Complete the Header,No
+jenah.george@ufl.edu,"Sep 12, 2026 4:47:54","I think this section can be simplified, but there is one important system behavior I would add.
+
+When you select OK, Workday creates the Expense Report, assigns a report number, and sets the status to Draft. Draft reports do not route for approval and can be reopened and updated.
+
+If credit card transactions were selected before clicking OK, those charges are now linked to that Draft Expense Report and will no longer appear in the Credit Card Transactions list for another report. If the report will not be submitted, or the charges need to be moved to a different Expense Report, the Draft Expense Report must be canceled so the transactions become available for selection again.
+
+For the Summary section, I would keep the summary. <3 
+
+I would also keep the callout that Reimbursement is the amount Workday will pay the traveler and should be verified before submission. <3",Complete the Header,No
+jenah.george@ufl.edu,"Sep 12, 2026 4:38:46","The quick expenses box from earlier belongs here with Credit Card Transactions. Maybe flip cards...
+
+Credit Card Transactions
+UF card charges that have not yet been reconciled. Review the available charges and include only those that belong on this Expense Report.
+
+Quick Expenses
+Scanned receipts or other supporting documentation saved in Workday, often through the mobile app or OCR email. Quick Expenses can be linked to a credit card transaction or used with a general expense line.
+
+Then keep the note underneath:
+
+Both tabs may include items from other trips. Select only the transactions and Quick Expenses that belong on this report.",Complete the Header,No
+jenah.george@ufl.edu,"Sep 12, 2026 4:38:12","I feel as though Worktag learning should come prior to this course. That being said, i find the graphic below to be a helpful reference. 
+What user should takeaway from this section: 
+Worktags determine funding and routing.
+Worktags do not carry over from the Spend Authorization.
+Complete the header worktags before adding lines so new lines inherit those values.
+Update line-level worktags when an expense uses different funding.
+Use itemization when one expense is split across multiple funding sources.",Complete the Header,No
+jenah.george@ufl.edu,"Sep 12, 2026 4:33:57","Memo
+Use the Memo for explanations that apply to the Expense Report as a whole. Put expense-specific explanations on the applicable expense line.
+
+If Other Purpose is selected, briefly describe the business purpose in the Memo.",Complete the Header,No
+jenah.george@ufl.edu,"Sep 12, 2026 4:33:10","Final Expense Report for Spend Authorization
+Select this only when no additional Expense Reports will be submitted against the Spend Authorization. Selecting it releases the remaining encumbrance and closes the Spend Authorization. This cannot be undone.",Complete the Header,No
+jenah.george@ufl.edu,"Sep 12, 2026 4:32:11","I like the interactive graphic here:
+
+At the top, I would shorten the introduction to something like:
+
+Complete the Header
+
+The header contains information that applies to the Expense Report as a whole, including the traveler, business purpose, organization, Spend Authorization, and funding.
+
+Complete and review the header before adding expense lines.
+
+I would also add a short tip explaining why the header worktags matter:
+
+(Bolded)Tip: Complete the header worktags before adding expense lines. New lines will default the header funding values, which can save you from entering the same worktags on every line",Complete the Header,No
+Gwynn Cadwallader,"Aug 21, 2026 19:28:51","this is not clear. Select All takes all of it, so use it only when every listed item belongs on this report.",Complete the Header,Yes
+jenah.george@ufl.edu,"Sep 13, 2026 2:46:47","I think this section is mixing process guidance with documentation requirements. I would keep Personal Travel/Personal Expenses and the Business Meal guidance with the expense-line content, but move most of the item-specific attachment requirements to the Receipts and Documentation section. That would keep this part focused on completing the expense correctly and put documentation requirements where the learner would naturally expect to find them.","Add Expense Lines: Items, Details, and Funding",No
+jenah.george@ufl.edu,"Sep 13, 2026 2:42:10",,"Add Expense Lines: Items, Details, and Funding",No
+jenah.george@ufl.edu,"Sep 12, 2026 5:23:30","Expense Review Adjustment
+
+Use an Expense Review Adjustment when a calculated mileage, travel meal, or travel allowance amount needs to be reduced.
+
+Select the matching adjustment item and enter the adjustment as a negative amount.
+
+These items are used only when an adjustment is needed and may be entered by someone with the appropriate initiate or review access.","Add Expense Lines: Items, Details, and Funding",No
+jenah.george@ufl.edu,"Sep 12, 2026 5:20:48","Complete Item Details
+
+Item Details change based on the Expense Item selected. Complete the required fields that appear and review the on-screen instructions for that item.
+
+Then only call out the fields that are genuinely easy to misunderstand.","Add Expense Lines: Items, Details, and Funding",No
+jenah.george@ufl.edu,"Sep 12, 2026 5:19:13","Attendees and Passengers
+Add other people who participated in the expense when the field appears. Workday automatically includes the traveler (Pay To). Review for accuracy
+
+Some expense types use Passenger instead of Attendee, such as chartered aircraft or bus travel.
+
+For business meals, enter the total Number of Persons and list each participant in Attendee(s).","Add Expense Lines: Items, Details, and Funding",No
+jenah.george@ufl.edu,"Sep 12, 2026 5:18:38","While it may be confusing, I dont think we should say it...Departure and Arrival Dates ","Add Expense Lines: Items, Details, and Funding",No
+jenah.george@ufl.edu,"Sep 12, 2026 5:16:18","For the three tabs, I actually like the Destination / Class of Service / Booking Method structure. I’d just cut the wording down.
+
+Destination
+Select the applicable city and make sure it matches the travel type of the Expense Item.
+
+Class of Service
+Select the applicable airfare or car rental class. If the traveler used a class above the standard allowable option, provide the required justification.
+
+Booking Method
+For airfare, lodging, car rental, and train expenses, select either Used Booking Tool/World Travel Services or Booking Tool Exception. If an exception is selected, the traveler will receive the related questionnaire.","Add Expense Lines: Items, Details, and Funding",No
+jenah.george@ufl.edu,"Sep 12, 2026 5:11:00","Receipt Included
+
+Select Receipt Included when the required receipt has been attached to the expense line.
+
+Attach an itemized receipt when required by UF policy or the selected Expense Item.
+
+If a required receipt is unavailable, use Missing Receipt instead.
+
+Then I’d move the rest to the Receipts, documentation, and submission tab
+","Add Expense Lines: Items, Details, and Funding",No
+jenah.george@ufl.edu,"Sep 12, 2026 5:08:24","Line Worktags
+
+Line worktags default from the header. If a line uses different funding, update the worktags on that line.
+
+For lodging and travel meals, the header worktags still carry forward, but they should be reviewed where the expense is broken out:
+
+Review lodging worktags on each itemization row.
+Review travel meal worktags on each Travel Journal day.","Add Expense Lines: Items, Details, and Funding",No
+jenah.george@ufl.edu,"Sep 12, 2026 5:05:54","Memo
+
+Use the Memo to provide additional context about the expense when needed.
+
+It is not required for every expense, but it can help explain why the charge was incurred or provide details that are not clear elsewhere on the line.","Add Expense Lines: Items, Details, and Funding",No
+jenah.george@ufl.edu,"Sep 12, 2026 5:04:36","Currency
+
+Currency defaults to USD.
+
+Card transactions are already converted by the card issuer, so no additional conversion is needed.
+
+For manually entered foreign expenses, either:
+
+enter the exchange rate and let Workday calculate the USD amount, or
+calculate the USD amount outside Workday and enter it directly.
+
+Workday does not provide or validate the exchange rate.
+
+I would move the receipt scanning / supported language information out of this card entirely. That feels much more appropriate in the Receipts and Documentation section.","Add Expense Lines: Items, Details, and Funding",No
+jenah.george@ufl.edu,"Sep 12, 2026 5:02:36","Total Amount
+
+Enter the total amount being claimed for the expense line.
+
+If the expense is itemized, the itemized amounts must add up to the Total Amount.
+
+The Total Amounts from all expense lines roll up to the Expense Report total.","Add Expense Lines: Items, Details, and Funding",No
+jenah.george@ufl.edu,"Sep 12, 2026 5:01:47","Expense Item
+
+Select the Expense Item that best matches the expense and travel location.
+
+Examples:
+
+In State Car Rental
+Out of State Airfare
+International Lodging
+
+Use the applicable international Expense Item for expenses related to an international trip.
+
+Do not use In State Travel, Out of State Travel, International Travel, or Comp Travel on an Expense Report. Those items are for Spend Authorizations.
+
+
+Pro Tip: Expense Item search also recognizes related keywords. For example, searching hotel or motel will return related lodging Expense Items.","Add Expense Lines: Items, Details, and Funding",No
+jenah.george@ufl.edu,"Sep 12, 2026 4:58:43","Expense Date
+
+The Expense Date depends on how the expense was added:
+
+New Expense: defaults to today. Update it to the date the expense was incurred.
+Credit Card Transaction: uses the posted transaction date and cannot be changed.
+Quick Expense: confirm how the date populates before finalizing this guidance.","Add Expense Lines: Items, Details, and Funding",No
+jenah.george@ufl.edu,"Sep 12, 2026 4:56:11","I would move the airfare/lodging-specific examples out of this introductory section and put them where those expense types are actually explained. 
+ I’d recommend:
+
+Where Expense Lines Come From
+
+Expense lines may come from a Credit Card Transaction, Quick Expense, or New Expense.
+
+Credit Card Transaction: Select an unreconciled UF card charge.
+Quick Expense: Select a receipt or supporting document already captured in Workday.
+New Expense: Enter the expense manually, typically for an out-of-pocket cost.
+
+Tip: Information brought in from a card transaction should still be reviewed for accuracy and completed as needed.","Add Expense Lines: Items, Details, and Funding",No
+jenah.george@ufl.edu,"Sep 12, 2026 4:54:50","Expense lines can come from three places:
+
+Credit Card Transaction — an unreconciled UF card charge.
+Quick Expense — a receipt or supporting document already captured in Workday.
+New Expense — a manually entered expense, such as an out-of-pocket cost.
+
+
+Review imported information carefully. Card transactions bring in values from the card file, but you still need to confirm and complete the required Expense Item details.
+","Add Expense Lines: Items, Details, and Funding",No
+jenah.george@ufl.edu,"Sep 13, 2026 3:08:07","Itemize the hotel bill using the appropriate Lodging Expense Items for the room, tax, parking, and resort fee.
+
+
+Correct. Lodging must be fully itemized. Use the room rate and room tax rows, then add separate itemization rows for any additional hotel charges.","Itemize: Lodging, Split Funding, and Multiple Destinations",No
+jenah.george@ufl.edu,"Sep 13, 2026 3:02:53","I think this belongs in the Expense Item/expense line section rather than as its own standalone process. The fee is really just a specific type of credit card transaction that needs to be handled a certain way. I would reduce this to a short callout: separate line, same Expense Item as the related purchase, identify it in the Memo, and attach the related receipt if there is no separate receipt for the fee. I don’t think we need a separate intro, three-step carousel, example, and conclusion for this one.","Itemize: Lodging, Split Funding, and Multiple Destinations",No
+jenah.george@ufl.edu,"Sep 13, 2026 3:03:59","I’d move it into the Expense Item / completing expense lines section.
+
+And would reduce it to something like:
+
+International Transaction Fees
+
+An international transaction fee appears as a separate credit card charge and should be added as its own expense line.
+
+Use the same Expense Item as the related purchase.
+In the Memo, identify it as an international transaction fee and note the related purchase.
+If there is no separate receipt for the fee, attach the original purchase receipt to both lines.
+
+Do not itemize the fee under the original purchase.","Itemize: Lodging, Split Funding, and Multiple Destinations",No
+jenah.george@ufl.edu,"Sep 13, 2026 2:58:58","For the detailed sections, I would keep the guidance short and action-focused. I would also remove wording like “more manual than current state” since that feels more like implementation commentary than learner guidance
+
+Itemize Lodging
+Workday provides room rate and room tax rows. Complete those rows and add additional rows for other hotel charges, such as parking or Wi-Fi.
+
+If the room rate changes during the stay, use a separate room-rate row for each rate.
+
+Split an Expense Between Funding Sources
+Create one itemization row for each funding source and assign the appropriate worktags to each row.
+
+Itemize Multiple Destinations
+Create one itemization row for each applicable trip leg or destination. Do not count layovers as separate legs.
+
+Make sure all itemization rows add up to the original expense amount.
+
+.","Itemize: Lodging, Split Funding, and Multiple Destinations",No
+jenah.george@ufl.edu,"Sep 13, 2026 2:56:10","I like the structure of this section and think the carousel works well here, but I would simplify the text.
+
+I’d lead with the three reasons to itemize...
+
+When to use itemization:
+The Expense Item requires it.
+One expense is split across multiple funding sources.
+One charge covers multiple destinations.
+
+Each itemization row can have its own amount, destination, and worktags.
+
+Remaining Amount to Itemize must reach $0 before the report can be submitted.
+","Itemize: Lodging, Split Funding, and Multiple Destinations",No
+jenah.george@ufl.edu,"Sep 13, 2026 3:43:09",The employee owes $80 back to the university.,"Mileage, Travel Meals, and Cash Advances",No
+jenah.george@ufl.edu,"Sep 13, 2026 3:41:58","Reconcile a Cash Advance
+
+Link the Expense Report to the same Spend Authorization that issued the cash advance.
+
+Workday automatically applies eligible expenses to the outstanding cash advance balance. You do not enter the applied amount manually.
+
+Review Cash Advance Applied in the Expense Report summary to confirm the amount Workday applied.
+
+Important: A cash advance can only be reconciled against the Spend Authorization that issued it. Linking the Expense Report to a different Spend Authorization will leave the advance outstanding.
+
+How the Cash Advance Settles
+If eligible expenses exceed the cash advance, Workday applies the advance first and pays the remaining reimbursement to the employee.
+If eligible expenses are less than the cash advance, the employee owes the remaining balance back to the university.
+If that balance is still outstanding when a later Expense Report is processed, Workday will reduce the next reimbursement by the outstanding balance.
+
+Do not record repayment on the Expense Report. Repayment is handled separately.","Mileage, Travel Meals, and Cash Advances",No
+jenah.george@ufl.edu,"Sep 13, 2026 3:26:34",reconciling,"Mileage, Travel Meals, and Cash Advances",No
+jenah.george@ufl.edu,"Sep 13, 2026 3:26:05","I think the Travel Journal is important, but this interaction feels heavier than it needs to be. I would keep the screenshot and explain the four things the learner needs to review on each day—destination, worktags, meals provided, and personal expense—in one place instead of a four-step carousel. I would keep the split-funding note as a small callout and remove the conclusion slide.","Mileage, Travel Meals, and Cash Advances",No
+jenah.george@ufl.edu,"Sep 13, 2026 3:18:53","Split Mileage Works Differently
+
+Use Mileage – Split Funding when a mileage expense needs to be charged to more than one funding source.
+
+This Expense Item is entered manually:
+
+Calculate the reimbursable mileage using the applicable UF mileage rate.
+Attach route documentation showing the mileage.
+Add passengers in Attendee(s) when applicable.
+Itemize the expense by funding source.
+
+I’d move the last sentence about Florida state government grant mileage and In State Fuel – Personal Vehicle to a separate note at the end of the previous section  or the Receipts/Documentation section. It is useful, but it distracts from the main split-mileage rule.","Mileage, Travel Meals, and Cash Advances",No
+jenah.george@ufl.edu,"Sep 13, 2026 3:16:59",,"Mileage, Travel Meals, and Cash Advances",No
+jenah.george@ufl.edu,"Sep 13, 2026 3:16:00",Add any passengers who traveled with the employee.,"Mileage, Travel Meals, and Cash Advances",No
+jenah.george@ufl.edu,"Sep 13, 2026 3:15:38",The mileage Workday will use to calculate reimbursement.,"Mileage, Travel Meals, and Cash Advances",No
+jenah.george@ufl.edu,"Sep 13, 2026 3:14:56",The distance returned for the route.,"Mileage, Travel Meals, and Cash Advances",No
+jenah.george@ufl.edu,"Sep 13, 2026 3:14:31","Origin and Destination Address
+Enter the starting and ending locations for the trip.","Mileage, Travel Meals, and Cash Advances",No
+jenah.george@ufl.edu,"Sep 13, 2026 3:13:47","How Mileage Calculates
+
+Select the applicable mileage Expense Item and enter the origin and destination.
+
+Workday calculates the driving distance and reimbursement using the applicable UF mileage rate.
+
+Review the calculated distance before submitting.","Mileage, Travel Meals, and Cash Advances",No
+jenah.george@ufl.edu,"Sep 13, 2026 3:16:28","If the calculated route does not reflect the actual business travel, review the mileage and provide supporting documentation when required.","Mileage, Travel Meals, and Cash Advances",No
+jenah.george@ufl.edu,"Sep 13, 2026 2:49:14","Mileage and Travel Meals are expense items, and should be included in that section. Cash Advance can be its own mini section","Mileage, Travel Meals, and Cash Advances",No
+jenah.george@ufl.edu,"Sep 13, 2026 4:42:31","I think we may want to revisit this knowledge check. Since hotel expenses require a receipt, the Missing Receipt option would not allow the report to be submitted in this example.
+We  could use a different expense item where Missing Receipt is allowed....or if we want to keep the hotel example, the correct answer should reflect that the receipt is still required before submission.","Receipts, Documentation, and Submission",No
+jenah.george@ufl.edu,"Sep 13, 2026 4:39:06",Keeps the Expense Report in Draft so you can return and finish it later.,"Receipts, Documentation, and Submission",No
+jenah.george@ufl.edu,"Sep 13, 2026 4:36:47","Errors
+Must be corrected before the Expense Report can be submitted.
+
+Alerts
+Provide information or flag something for review. They do not always block submission.","Receipts, Documentation, and Submission",No
+jenah.george@ufl.edu,"Sep 13, 2026 4:19:07","Review Before You Submit
+
+Before submitting the Expense Report, take a moment to review it for accuracy and completeness. Resolve any errors, review alerts, confirm required documentation is attached, and verify the amounts before sending the report into approval.","Receipts, Documentation, and Submission",No
+jenah.george@ufl.edu,"Sep 13, 2026 4:12:33",,"Receipts, Documentation, and Submission",No
+jenah.george@ufl.edu,"Sep 13, 2026 4:12:10",,"Receipts, Documentation, and Submission",No
+jenah.george@ufl.edu,"Sep 13, 2026 4:15:00","Hey Brady, I would remove this section entirely and move directly into Review Before You Submit.  Learner has already worked through these scenarios throughout the course, and the checklist that follows provides the appropriate recap before submission. Keeping both feels repetitive.","Receipts, Documentation, and Submission",No
+jenah.george@ufl.edu,"Sep 13, 2026 5:19:34","I think canceling should be its own note, in the same section. I recommend adding the bolded pieces above and leave the note about cancelling in the green box.
+
+I’d also move the earlier Editing the Header Afterward content right around here, because this is the natural place to explain what can still be changed versus what would require a new Expense Report. ","After You Submit: Track, Change, and Report",No
+jenah.george@ufl.edu,"Sep 13, 2026 5:13:07","Track an Expense Report- The visual is very helpful...
+
+Open the Expense Report and select the Business Process tab.
+
+This shows each workflow step, its status, completion date, and the person assigned to act. The most recent step shows where the report is currently sitting and what happens next.","After You Submit: Track, Change, and Report",No
+jenah.george@ufl.edu,"Sep 13, 2026 5:10:10","Someone Else’s Expense Reports
+Users with the appropriate finance security can use Find Expense Report Lines for Organization to locate Expense Reports within their company.
+
+I would remove the long list of every field the report returns. That feels more like report documentation than course content and could live in a job aid or reporting guide.
+
+I would also simplify the security explanation to:
+
+Expense Report visibility is based on Company security, so the report may return Expense Reports outside of your immediate department.
+
+I also think this is a good place to move the Editing the Header Afterward content we discussed earlier.
+
+The flow could be:
+After You Submit: Track, Change, and Report
+Find an Expense Report
+ Track the status
+Change or correct an Expense Report
+ What can still be edited / when a new report is needed
+ Canceling a report, if applicable","After You Submit: Track, Change, and Report",No
+jenah.george@ufl.edu,"Sep 13, 2026 5:07:41","Use My Expense Reports from the Expenses Hub or search bar to find reports you created or reports created for you. You can review the report status, reimbursement amount, and payment status.","After You Submit: Track, Change, and Report",No
+jenah.george@ufl.edu,"Sep 13, 2026 5:23:26","I would use less words, maybe something like:
+
+Final Expense Report Checklist
+
+Before submitting, confirm:
+
+The report is for the correct traveler and any card charges belong to them.
+The correct Spend Authorization is linked, when applicable.
+Final Expense Report is selected only when this is truly the last report against the Spend Authorization.
+Header and line worktags are correct.
+Each line uses the appropriate Expense Item and required Item Details are complete.
+Required itemization, Travel Journal entries, attendees, and booking information are complete.
+Required receipts and supporting documentation are attached.
+Personal expenses and personal travel are identified correctly.
+Errors are cleared and alerts have been reviewed.
+Reimbursement and Cash Advance Applied, when applicable, have been verified before submission.",Wrap-Up: Your Expense Report Checklist,No
+Gwynn Cadwallader,"Aug 21, 2026 19:47:32","LOve the art and graphics. The course is well organized, logical and succinct. Excellent work Brady!! ",Wrap-Up: Your Expense Report Checklist,Yes
