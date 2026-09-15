@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="Accessible interactive guide to the roles that initiate, review, and approve Spend Authorizations."
+    name="description" />
+  <title>Spend Authorization Roles and Responsibilities</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #1f7e52;
+      --primary-dark: #145c3a;
+      --primary-light: #eaf5ef;
+
+      --secondary: #0a2455;
+      --secondary-light: #edf2f8;
+
+      --text: #000000;
+      --surface: #ffffff;
+      --border: #6b7280;
+
+      --warning: #765500;
+      --warning-light: #fff6d8;
+      --warning-icon: #f2b705;
+
+      --danger: #982929;
+      --danger-light: #fff3f3;
+
+      --focus: #0a2455;
+      --focus-halo: #f2b705;
+      --shadow: 0 0.3rem 1rem rgba(10, 36, 85, 0.12);
+      --radius: 1rem;
+      --content-width: 90rem;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    header {
+       margin-bottom: 1.5rem;
+      padding: 1.15rem;
+      background: var(--primary-light);
+      border-radius: 2.5rem;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--surface);
+      font-family: "Poppins", Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    img,
+    svg {
+      max-width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    button,
+    summary {
+      font: inherit;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 0.2rem solid var(--focus);
+      outline-offset: 0.2rem;
+      box-shadow: 0 0 0 0.2rem var(--focus-halo);
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--content-width));
+      margin-inline: auto;
+    }
+
+    /* Main */
+
+    main {
+      padding: 2.75rem 0 4rem;
+      background: var(--surface);
+    }
+
+    .intro {
+      max-width: 100%;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+    }
+
+    .intro h1 {
+      margin: 0;
+      font-size: clamp(1.65rem, 3vw, 2.4rem);
+    }
+
+    .intro p {
+      margin: 0.75rem 0 0;
+    }
+
+    /* Accessible tabs */
+
+    .tabs {
+      margin-top: 2rem;
+    }
+
+    .tab-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.5rem;
+      margin: 0;
+      padding: 0.5rem 0.5rem 0;
+      background: var(--secondary-light);
+      border: 0.1rem solid var(--border);
+      border-bottom: 0;
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+
+    .tab-button {
+      position: relative;
+      min-height: 4.75rem;
+      padding: 0.8rem 1rem;
+      color: var(--text);
+      background: #ffffff;
+      border: 0.1rem solid var(--border);
+      border-bottom: 0.35rem solid transparent;
+      border-radius: 0.75rem 0.75rem 0 0;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .tab-button:hover {
+      background: var(--primary-light);
+      border-bottom-color: var(--primary);
+    }
+
+    .tab-button[aria-selected="true"] {
+      color: #ffffff;
+      background: var(--secondary);
+      border-color: var(--secondary);
+      border-bottom-color: var(--primary);
+    }
+
+    .tab-title,
+    .tab-description {
+      display: block;
+    }
+
+    .tab-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .tab-description {
+      margin-top: 0.15rem;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .tab-panel {
+      padding: clamp(1rem, 3vw, 2rem);
+      background: #ffffff;
+      border: 0.1rem solid var(--border);
+      border-top: 0.4rem solid var(--primary);
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+
+    .tab-panel[hidden] {
+      display: none;
+    }
+
+    .panel-introduction {
+      margin-bottom: 1.5rem;
+      padding: 1.15rem;
+      background: var(--primary-light);
+      border-left: 0.4rem solid var(--primary);
+      border-radius: 0.65rem;
+    }
+
+    .panel-introduction img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto 0.75rem;
+    }
+
+    .panel-introduction.secondary {
+      background: var(--secondary-light);
+      border-left-color: var(--secondary);
+    }
+
+    .panel-introduction h2 {
+      margin: 0;
+      font-size: clamp(1.65rem, 3vw, 2.4rem);
+    }
+
+    .panel-introduction p {
+      max-width: 100%;
+      margin: 0.55rem 0 0;
+    }
+
+    /* How to use */
+
+    .how-to-use {
+      display: grid;
+      grid-template-columns: 2.75rem minmax(0, 1fr);
+      gap: 0.9rem;
+      align-items: start;
+      margin-bottom: 1.5rem;
+      padding: 1.15rem;
+      background: var(--secondary-light);
+      border-left: 0.4rem solid var(--secondary);
+      border-radius: 0.65rem;
+    }
+
+    .how-to-use-icon {
+      display: grid;
+      width: 2.75rem;
+      height: 2.75rem;
+      color: var(--secondary);
+      background: #ffffff;
+      border: 0.12rem solid var(--secondary);
+      border-radius: 50%;
+      place-items: center;
+    }
+
+    .how-to-use-icon svg {
+      width: 1.6rem;
+      height: 1.6rem;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.8;
+    }
+
+    .how-to-use-icon .dot {
+      fill: currentColor;
+      stroke: none;
+    }
+
+    .how-to-use h2 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.25rem, 2vw, 1.65rem);
+    }
+
+    .how-to-use ul {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+
+    .how-to-use li+li {
+      margin-top: 0.4rem;
+    }
+
+    /* Shared approval actions */
+
+    .shared-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .shared-action-panel {
+      padding: 0.85rem;
+      background: #ffffff;
+      border: 0;
+      border-left: 0.3rem solid var(--primary-dark);
+      border-radius: 0.5rem;
+    }
+
+    .shared-action-panel.restriction {
+      background: var(--danger-light);
+      border-left-color: var(--danger);
+    }
+
+    .shared-action-panel h3 {
+      display: flex;
+      gap: 0.55rem;
+      align-items: center;
+      margin: 0 0 0.65rem;
+      font-size: 1rem;
+    }
+
+    .shared-action-panel ul {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+
+    .shared-action-panel li+li {
+      margin-top: 0.4rem;
+    }
+
+    .status-icon,
+    .list-icon {
+      display: inline-grid;
+      flex: 0 0 auto;
+      width: 1.6rem;
+      height: 1.6rem;
+      color: #ffffff;
+      background: var(--primary-dark);
+      border-radius: 50%;
+      place-items: center;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .status-icon.restriction {
+      background: var(--danger);
+    }
+
+    /* Role tiles */
+
+    .card-grid {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 21rem), 1fr));
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    details.role-card {
+      color: var(--text);
+      background: #ffffff;
+      border: 0.1rem solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .card-summary {
+      display: grid;
+      grid-template-columns: 3.25rem minmax(0, 1fr) 2.1rem;
+      gap: 0.9rem;
+      align-items: center;
+      min-height: 8rem;
+      padding: 1.15rem;
+      color: var(--text);
+      background: var(--primary-light);
+      border-left: 0.4rem solid var(--primary);
+      border-radius: calc(var(--radius) - 0.1rem);
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .card-summary.secondary {
+      background: var(--secondary-light);
+      border-left-color: var(--secondary);
+    }
+
+    .card-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .card-summary::marker {
+      content: "";
+    }
+
+    .card-summary:hover {
+      background: #d9ede3;
+    }
+
+    .card-summary.secondary:hover {
+      background: #dfe7f2;
+    }
+
+    details[open]>.card-summary {
+      border-bottom: 0.1rem solid var(--border);
+      border-radius:
+        calc(var(--radius) - 0.1rem) calc(var(--radius) - 0.1rem) 0 0;
+    }
+
+    .role-icon {
+      display: grid;
+      width: 3.25rem;
+      height: 3.25rem;
+      color: var(--text);
+      background: #ffffff;
+      border: 0.12rem solid var(--primary);
+      border-radius: 50%;
+      place-items: center;
+    }
+
+    .card-summary.secondary .role-icon {
+      border-color: var(--secondary);
+    }
+
+    .role-icon svg {
+      width: 1.8rem;
+      height: 1.8rem;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.8;
+    }
+
+    .card-summary h3 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .role-type {
+      display: block;
+      margin-top: 0.3rem;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .expand-hint {
+      display: block;
+      margin-top: 0.45rem;
+      color: var(--secondary);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .expand-hint::before {
+      content: "Select to expand";
+    }
+
+    details[open] .expand-hint::before {
+      content: "Select to collapse";
+    }
+
+    .card-summary:hover .expand-hint,
+    .card-summary:focus-visible .expand-hint {
+      text-decoration: underline;
+      text-underline-offset: 0.2rem;
+    }
+
+    .toggle-icon {
+      display: grid;
+      width: 2.1rem;
+      height: 2.1rem;
+      color: #ffffff;
+      background: var(--secondary);
+      border-radius: 50%;
+      place-items: center;
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .toggle-icon::before {
+      content: "+";
+    }
+
+    details[open] .toggle-icon {
+      background: var(--primary-dark);
+    }
+
+    details[open] .toggle-icon::before {
+      content: "−";
+    }
+
+    .card-body {
+      padding: 1.15rem;
+      background: #ffffff;
+      border-radius:
+        0 0 calc(var(--radius) - 0.1rem) calc(var(--radius) - 0.1rem);
+    }
+
+    .review-box {
+      padding: 0.85rem;
+      background: var(--primary-light);
+      border-left: 0.3rem solid var(--primary-dark);
+      border-radius: 0.5rem;
+    }
+
+    .review-box img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto 0.75rem;
+    }
+
+    .review-box.secondary {
+      background: var(--secondary-light);
+      border-left-color: var(--secondary);
+    }
+
+    .review-box h4 {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      margin: 0 0 0.75rem;
+      font-size: 1rem;
+    }
+
+    .responsibility-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .responsibility-list li {
+      display: grid;
+      grid-template-columns: 1.6rem minmax(0, 1fr);
+      gap: 0.6rem;
+      align-items: start;
+    }
+
+    .responsibility-list li+li {
+      margin-top: 0.65rem;
+    }
+
+    /* Important notes */
+
+    .important-note {
+      display: grid;
+      grid-template-columns: 1.8rem minmax(0, 1fr);
+      gap: 0.7rem;
+      align-items: start;
+      margin: 1rem 0 0;
+      padding: 0.85rem;
+      color: var(--text);
+      background: var(--warning-light);
+      border-left: 0.3rem solid var(--warning);
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .important-icon {
+      width: 1.8rem;
+      height: 1.8rem;
+      overflow: visible;
+    }
+
+    .important-icon path {
+      fill: var(--warning-icon);
+      stroke: var(--text);
+      stroke-width: 1.5;
+    }
+
+    .important-icon line {
+      stroke: var(--text);
+      stroke-linecap: round;
+      stroke-width: 2;
+    }
+
+    .important-icon circle {
+      fill: var(--text);
+    }
+
+    /* Glossary */
+
+    .glossary-section {
+      margin-top: 3rem;
+    }
+
+    .glossary-heading {
+      padding-left: 1rem;
+      border-left: 0.4rem solid var(--secondary);
+    }
+
+    .glossary-heading h2 {
+      margin: 0;
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+    }
+
+    .glossary-heading p {
+      margin: 0.5rem 0 0;
+    }
+
+    .glossary {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+      gap: 1.25rem 1.75rem;
+      margin: 1.5rem 0 0;
+    }
+
+    .glossary div {
+      padding: 0 0 0 0.9rem;
+      background: transparent;
+      border: 0;
+      border-left: 0.25rem solid var(--primary);
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .glossary dt {
+      font-weight: 700;
+    }
+
+    .glossary dd {
+      margin: 0.35rem 0 0;
+    }
+
+    footer {
+      padding: 2rem 0;
+      color: var(--text);
+      background: #ffffff;
+      border-top: 0.35rem solid var(--secondary);
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 48rem) {
+
+      .hero-layout,
+      .how-to-use,
+      .shared-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .tab-list {
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+        border-bottom: 0.1rem solid var(--border);
+        border-radius: var(--radius) var(--radius) 0 0;
+      }
+
+      .tab-button {
+        min-height: auto;
+        border: 0.1rem solid var(--border);
+        border-left: 0.35rem solid transparent;
+        border-radius: 0.5rem;
+        text-align: left;
+      }
+
+      .tab-button:hover {
+        border-bottom-color: var(--border);
+        border-left-color: var(--primary);
+      }
+
+      .tab-button[aria-selected="true"] {
+        border-color: var(--secondary);
+        border-left-color: var(--primary);
+      }
+
+      .svg-placeholder {
+        min-height: 11rem;
+      }
+
+      .card-summary {
+        min-height: 7rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media (prefers-contrast: more) {
+
+      .tab-panel,
+      details.role-card,
+      .source-note {
+        border-width: 0.15rem;
+        border-color: var(--text);
+        box-shadow: none;
+      }
+    }
+
+    @media print {
+      body {
+        color: #000000;
+        background: #ffffff;
+        font-size: 12pt;
+      }
+
+      .skip-link,
+      .toggle-icon,
+      .expand-hint,
+      .tab-list {
+        display: none;
+      }
+
+      .hero,
+      main,
+      footer {
+        color: #000000;
+        background: #ffffff;
+      }
+
+      .tab-panel,
+      .tab-panel[hidden] {
+        display: block !important;
+        margin-top: 1.5rem;
+        border: 0.1rem solid #000000;
+      }
+
+      .tab-panel::before {
+        display: block;
+        margin-bottom: 1rem;
+        font-size: 16pt;
+        font-weight: 700;
+      }
+
+      #initiate-panel::before {
+        content: "Initiate";
+      }
+
+      #review-panel::before {
+        content: "Review";
+      }
+
+      #approve-panel::before {
+        content: "Approve";
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      details.role-card {
+        break-inside: avoid;
+        box-shadow: none;
+      }
+
+      .card-summary,
+      .card-summary.secondary {
+        grid-template-columns: 3.25rem minmax(0, 1fr);
+        background: #ffffff;
+        border-bottom: 0.1rem solid #000000;
+      }
+    }
+
+
+    /* Grouped approver rows */
+    .approver-groups {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .approver-group {
+      padding-top: 0.25rem;
+    }
+
+    .approver-group+.approver-group {
+      padding-top: 1.5rem;
+      border-top: 0.15rem solid var(--secondary-light);
+    }
+
+    .approver-group-heading {
+      margin: 0 0 1rem;
+      padding-left: 0.85rem;
+      border-left: 0.35rem solid var(--primary);
+      font-size: clamp(1.25rem, 2vw, 1.65rem);
+    }
+
+    .approver-group-description {
+      max-width: 100%;
+      margin: -0.45rem 0 1rem 1.2rem;
+    }
+
+    .single-role-row {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .single-role-row .role-card {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="container">
+      <h1 id="page-title">Explore Roles by Process Function</h1>
+      <p>
+        A person may hold more than one role, but initiating, reviewing, and
+        approving remain separate functions.
+      </p>
+  </header>
+  <main class="container" id="main-content">
+    <section aria-labelledby="how-to-use-heading" class="how-to-use">
+      <span aria-hidden="true" class="how-to-use-icon">
+        <svg viewbox="0 0 32 32">
+          <circle cx="16" cy="16" r="13"></circle>
+          <path d="M16 15v8"></path>
+          <circle class="dot" cx="16" cy="10" r="1.4"></circle>
+        </svg>
+      </span>
+      <div>
+        <h2 id="how-to-use-heading">How to use this</h2>
+        <ul>
+          <li>
+            Select a tab to show the roles for that part of the process. The
+            Initiate tab is open when the page loads.
+          </li>
+          <li>
+            Select a role tile to expand its details, then select it again to
+            collapse it. The plus sign changes to a minus sign while a tile is
+            open.
+          </li>
+          <li>
+            Using a keyboard, press Tab to reach the tab list, then press the
+            Left or Right arrow key to move between tabs. Press Tab to reach a
+            role tile, then press Enter or the Space bar to open or close it.
+          </li>
+          <li>
+            Printing the page opens every role tile and includes all three
+            tabs.
+          </li>
+        </ul>
+      </div>
+    </section>
+    <div class="tabs">
+      <div aria-label="Spend Authorization process functions" class="tab-list" role="tablist">
+        <button aria-controls="initiate-panel" aria-selected="true" class="tab-button" id="initiate-tab" role="tab"
+          tabindex="0" type="button">
+          <span class="tab-title">1. Initiate</span>
+          <span class="tab-description">Create and submit the request</span>
+        </button>
+        <button aria-controls="review-panel" aria-selected="false" class="tab-button" id="review-tab" role="tab"
+          tabindex="-1" type="button">
+          <span class="tab-title">2. Review</span>
+          <span class="tab-description">Verify and correct the request</span>
+        </button>
+        <button aria-controls="approve-panel" aria-selected="false" class="tab-button" id="approve-tab" role="tab"
+          tabindex="-1" type="button">
+          <span class="tab-title">3. Approve</span>
+          <span class="tab-description">Authorize the request to continue</span>
+        </button>
+      </div>
+      <!-- Initiate tab panel -->
+      <section aria-labelledby="initiate-tab" class="tab-panel" id="initiate-panel" role="tabpanel" tabindex="0">
+        <div class="panel-introduction">
+          <h2>Initiate</h2>
+          <p>
+            Initiators create, prepare, save, modify, and submit Spend
+            Authorizations. Initiating a transaction does not provide approval
+            authority.
+          </p>
+        </div>
+        <div class="card-grid">
+          <details class="role-card">
+            <summary class="card-summary">
+              <span aria-hidden="true" class="role-icon">
+                <svg viewbox="0 0 32 32">
+                  <circle cx="12" cy="9" r="5"></circle>
+                  <path d="M3 26c1-7 4-11 9-11 3 0 5 1 7 4"></path>
+                  <path d="M20 23h9M25 18v10"></path>
+                </svg>
+              </span>
+              <span>
+                <h3>Employee as Self</h3>
+                <span class="role-type">
+                  Creates a request for their own travel
+                </span>
+                <span aria-hidden="true" class="expand-hint"></span>
+              </span>
+              <span aria-hidden="true" class="toggle-icon"></span>
+            </summary>
+            <div class="card-body">
+              <div class="review-box">
+                <img alt="Employee as Self" src="images/self.png" />
+                <h4>
+                  <span aria-hidden="true" class="status-icon">✓</span>
+                  Initiator responsibilities
+                </h4>
+                <ul class="responsibility-list">
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>
+                      Create and submit a Spend Authorization for their own
+                      travel.
+                    </span>
+                  </li>
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>Modify or save their request for later.</span>
+                  </li>
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>
+                      Verify the position, company, travel dates, description,
+                      Business Purpose, and Justification.
+                    </span>
+                  </li>
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>
+                      Enter accurate estimates, travel lines, worktags,
+                      destinations, attendees, and supporting information.
+                    </span>
+                  </li>
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>
+                      Correct errors and review alerts before submitting.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </details>
+          <details class="role-card">
+            <summary class="card-summary secondary">
+              <span aria-hidden="true" class="role-icon">
+                <svg viewbox="0 0 32 32">
+                  <path d="M7 4h13l5 5v19H7z"></path>
+                  <path d="M20 4v6h6M11 16h10M11 21h10"></path>
+                </svg>
+              </span>
+              <span>
+                <h3>Expense Data Entry Specialist</h3>
+                <span class="role-type">
+                  EDES · Creates requests on behalf of others
+                </span>
+                <span aria-hidden="true" class="expand-hint"></span>
+              </span>
+              <span aria-hidden="true" class="toggle-icon"></span>
+            </summary>
+            <div class="card-body">
+              <div class="review-box secondary">
+                <img alt="Expense Data Entry Specialist" src="images/edes.png" />
+                <h4>
+                  <span aria-hidden="true" class="status-icon">✓</span>
+                  Initiator responsibilities
+                </h4>
+                <ul class="responsibility-list">
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>
+                      Create, prepare, modify, save, and submit Spend
+                      Authorizations for workers in the same Workday company.
+                    </span>
+                  </li>
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>
+                      For a guest or student whom UF will reimburse directly, first submit a
+                      <strong>Create External Committee Member (ECM) Request for Guest Travel</strong>
+                      through <strong>Create Request</strong>. Include the person’s contact details,
+                      ACH contact preference, supporting documentation, and comments. After the
+                      non-worker is established in Workday, use
+                      <strong>Create Spend Authorization for Non-Worker</strong> and manually add the
+                      payee to Attendees on every applicable line. Because an ECM has no My Tasks
+                      inbox, Workday position, or Manager, the request has no traveler-review or
+                      Manager step and routes first to the Expenses Cost Center Coordinator.
+                    </span>
+                  </li>
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>
+                      Gather complete travel dates, destinations, estimated
+                      costs, attendees, funding, and cash-advance information.
+                    </span>
+                  </li>
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>
+                      Verify header information, lines, worktags, Item Details,
+                      attachments, errors, and alerts before submitting.
+                    </span>
+                  </li>
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>
+                      View the <strong>Find Spend Authorizations</strong>,
+                      <strong>Find Expense Reports</strong>, and
+                      <strong>Find Credit Card Transactions</strong> reports.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <p class="important-note">
+                <svg aria-hidden="true" class="important-icon" viewbox="0 0 32 32">
+                  <path d="M16 3 30 28H2Z"></path>
+                  <line x1="16" x2="16" y1="11" y2="20"></line>
+                  <circle cx="16" cy="24" r="1.4"></circle>
+                </svg>
+                <span>
+                  <strong>Important:</strong> The EDES role has no approval
+                  authority. An EDES who approves does so through a separate
+                  approval role.
+                </span>
+              </p>
+            </div>
+          </details>
+
+        </div>
+      </section>
+      <!-- Review tab panel -->
+      <section aria-labelledby="review-tab" class="tab-panel" hidden="" id="review-panel" role="tabpanel" tabindex="0">
+        <div class="panel-introduction secondary">
+          <h2>Review</h2>
+          <p>
+            Reviewers verify that the request is complete and accurate. These
+            reviewers may edit the Spend Authorization, save unfinished
+            changes for later, or send it back when corrections are required.
+          </p>
+        </div>
+        <div class="card-grid">
+          <details class="role-card">
+            <summary class="card-summary secondary">
+              <span aria-hidden="true" class="role-icon">
+                <svg viewbox="0 0 32 32">
+                  <circle cx="12" cy="9" r="5"></circle>
+                  <path d="M3 26c1-7 4-11 9-11 3 0 5 1 7 4"></path>
+                  <path d="m19 22 3 3 7-9"></path>
+                </svg>
+              </span>
+              <span>
+                <h3>Employee as Self</h3>
+                <span class="role-type">
+                  Reviews an international request created on their behalf
+                </span>
+                <span aria-hidden="true" class="expand-hint"></span>
+              </span>
+              <span aria-hidden="true" class="toggle-icon"></span>
+            </summary>
+            <div class="card-body">
+              <div class="review-box secondary">
+                <img alt="Employee as Self" src="images/self.png" />
+                <h4>
+                  <span aria-hidden="true" class="status-icon">✓</span>
+                  What the employee reviews
+                </h4>
+                <ul class="responsibility-list">
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>Travel dates.</span>
+                  </li>
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>Business Purpose and Justification.</span>
+                  </li>
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>How the trip supports UF’s mission.</span>
+                  </li>
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>Destination and estimated amount on each line.</span>
+                  </li>
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>Required supporting documentation.</span>
+                  </li>
+                </ul>
+              </div>
+              <p class="important-note">
+                <svg aria-hidden="true" class="important-icon" viewbox="0 0 32 32">
+                  <path d="M16 3 30 28H2Z"></path>
+                  <line x1="16" x2="16" y1="11" y2="20"></line>
+                  <circle cx="16" cy="24" r="1.4"></circle>
+                </svg>
+                <span>
+                  <strong>Available actions:</strong> The employee may approve,
+                  edit, send back, add an approver, or save for later. The
+                  employee must personally complete the International Travel
+                  Attestation before the request routes to the Manager.
+                </span>
+              </p>
+              <p class="important-note">
+                <svg aria-hidden="true" class="important-icon" viewbox="0 0 32 32">
+                  <path d="M16 3 30 28H2Z"></path>
+                  <line x1="16" x2="16" y1="11" y2="20"></line>
+                  <circle cx="16" cy="24" r="1.4"></circle>
+                </svg>
+                <span>
+                  A domestic Spend Authorization created on an employee’s
+                  behalf does not route to that employee for review.
+                </span>
+              </p>
+            </div>
+          </details>
+          <details class="role-card">
+            <summary class="card-summary">
+              <span aria-hidden="true" class="role-icon">
+                <svg viewbox="0 0 32 32">
+                  <rect height="24" rx="2" width="22" x="5" y="4"></rect>
+                  <path d="M10 10h12M10 16h5M10 22h12"></path>
+                  <path d="M20 14v5M17.5 16.5h5"></path>
+                </svg>
+              </span>
+              <span>
+                <h3>Expenses Cost Center Coordinator</h3>
+                <span class="role-type">
+                  Administrative and financial reviewer
+                </span>
+                <span aria-hidden="true" class="expand-hint"></span>
+              </span>
+              <span aria-hidden="true" class="toggle-icon"></span>
+            </summary>
+            <div class="card-body">
+              <div class="review-box">
+                <img alt="Cost center Coordinator" src="images/ccc.png" />
+                <h4>
+                  <span aria-hidden="true" class="status-icon">✓</span>
+                  What the coordinator reviews
+                </h4>
+                <ul class="responsibility-list">
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>
+                      Whether the Spend Authorization or Expense Report is accurate and complete.
+                    </span>
+                  </li>
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>Worktags and other financial information.</span>
+                  </li>
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>
+                      Whether financial and compliance requirements are met.
+                    </span>
+                  </li>
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>
+                      Whether each UF employee listed in Attendees has a
+                      separate Spend Authorization.
+                    </span>
+                  </li>
+                  <li>
+                    <span aria-hidden="true" class="list-icon">✓</span>
+                    <span>
+                      Whether the lines, estimates, Budget Dates, memos, and
+                      supporting information are accurate.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <p class="important-note">
+                <svg aria-hidden="true" class="important-icon" viewbox="0 0 32 32">
+                  <path d="M16 3 30 28H2Z"></path>
+                  <line x1="16" x2="16" y1="11" y2="20"></line>
+                  <circle cx="16" cy="24" r="1.4"></circle>
+                </svg>
+                <span>
+                  <strong>Important:</strong> This role is assigned by cost center, so a coordinator sees only their
+                  assigned cost centers. The coordinator may edit a submitted request and use <strong>Save for
+                    Later</strong> to retain unfinished changes, but has no financial approval authority. Apart from the
+                  traveler acting as Employee as Self on an international request, other workflow approvers must use
+                  <strong>Send Back</strong> rather than edit.
+                </span>
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+      <!-- Approve tab panel -->
+      <section aria-labelledby="approve-tab" class="tab-panel" hidden="" id="approve-panel" role="tabpanel"
+        tabindex="0">
+        <div class="panel-introduction">
+          <h2>Approve</h2>
+          <p>
+            Most approvers share the actions and restrictions below. Each role
+            tile focuses on the information that approver is responsible for
+            evaluating. Financial approval is determined for each line from its
+            worktags and may route to a department-level Cost Center Manager,
+            Grant Manager, Gift Manager, or Project Manager. Workday also
+            evaluates whether specialized approval conditions apply; a step
+            shown as not required reflects that evaluation rather than an
+            oversight.
+          </p>
+          <img alt="Approvers" src="images/approvers.png" />
+          <div class="shared-actions">
+            <section aria-labelledby="approver-actions-heading" class="shared-action-panel">
+              <h3 id="approver-actions-heading">
+                <span aria-hidden="true" class="status-icon">✓</span>
+                Actions available to most approvers
+              </h3>
+              <ul>
+                <li><strong>Approve</strong> the request.</li>
+                <li>
+                  <strong>Send Back</strong> with a required comment explaining
+                  what must be corrected. A Financial Approver may send the
+                  request to the Expenses Cost Center Coordinator or to the
+                  request initiator.
+                </li>
+                <li>
+                  <strong>Add Approvers</strong> when the request is correct but
+                  requires another qualified reviewer.
+                </li>
+                <li>
+                  <strong>Cancel</strong> to exit without acting. The task
+                  remains in My Tasks.
+                </li>
+              </ul>
+            </section>
+            <section aria-labelledby="approver-restrictions-heading" class="shared-action-panel restriction">
+              <h3 id="approver-restrictions-heading">
+                <span aria-hidden="true" class="status-icon restriction">×</span>
+                Restrictions and exceptions
+              </h3>
+              <ul>
+                <li>Approvers cannot edit the Spend Authorization.</li>
+                <li>
+                  If information is incorrect, the approver must use
+                  <strong>Send Back</strong>.
+                </li>
+                <li>No one may approve their own transaction.</li>
+                <li>
+                  The RISC Office and Expense Partner may also
+                  <strong>Deny</strong> in the circumstances described in their
+                  role tiles.
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+        <div class="approver-groups">
+          <section aria-labelledby="manager-approver-heading" class="approver-group">
+            <h2 class="approver-group-heading" id="manager-approver-heading">Manager</h2>
+            <p class="approver-group-description">Required supervisory approval for every employee Spend Authorization.
+            </p>
+            <div class="card-grid single-role-row">
+              <details class="role-card">
+                <summary class="card-summary">
+                  <span aria-hidden="true" class="role-icon">
+                    <svg viewbox="0 0 32 32">
+                      <circle cx="16" cy="9" r="5"></circle>
+                      <path d="M6 27c1-8 5-12 10-12s9 4 10 12"></path>
+                      <path d="m20 21 3 3 5-7"></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <h3>Manager</h3>
+                    <span class="role-type">
+                      Traveler’s HR supervisor of record
+                    </span>
+                    <span aria-hidden="true" class="expand-hint"></span>
+                  </span>
+                  <span aria-hidden="true" class="toggle-icon"></span>
+                </summary>
+                <div class="card-body">
+                  <p class="important-note">
+                    <svg aria-hidden="true" class="important-icon" viewbox="0 0 32 32">
+                      <path d="M16 3 30 28H2Z"></path>
+                      <line x1="16" x2="16" y1="11" y2="20"></line>
+                      <circle cx="16" cy="24" r="1.4"></circle>
+                    </svg>
+                    <span>The Manager is the traveler’s HR supervisor of record, which in practice is the direct
+                      supervisor, not an HR generalist, HR liaison, or departmental HR manager. Manager approval is
+                      required on every employee Spend Authorization regardless of funding source, destination, or
+                      personal days.</span>
+                  </p>
+                  <div class="review-box">
+                    <h4>What the Manager reviews</h4>
+                    <ul class="responsibility-list">
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether the travel dates are accurate and reasonable.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether the Business Purpose and Justification explain
+                          who, what, where, when, why, and how the trip benefits UF.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>Destinations and estimated amounts.</span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>Whether the worktags are appropriate.</span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether a cash advance is necessary and properly
+                          justified.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>Required supporting documentation.</span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether UF employees listed in Attendees have separate
+                          Spend Authorizations.
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <p class="important-note">
+                    <svg aria-hidden="true" class="important-icon" viewbox="0 0 32 32">
+                      <path d="M16 3 30 28H2Z"></path>
+                      <line x1="16" x2="16" y1="11" y2="20"></line>
+                      <circle cx="16" cy="24" r="1.4"></circle>
+                    </svg>
+                    <span>The Manager cannot edit the request. Use <strong>Send Back</strong> when a correction is
+                      required. Use <strong>Add Approvers</strong>, shown in some tasks as <strong>Approve and Send to
+                        Approvers</strong>, only when the request is correct but needs another qualified reviewer. That
+                      action records the Manager’s approval while routing the request.</span>
+                  </p>
+                </div>
+              </details>
+            </div>
+          </section>
+          <section aria-labelledby="risc-approver-heading" class="approver-group">
+            <h2 class="approver-group-heading" id="risc-approver-heading">RISC Office</h2>
+            <p class="approver-group-description">International travel compliance approval.</p>
+            <div class="card-grid single-role-row">
+              <details class="role-card">
+                <summary class="card-summary secondary">
+                  <span aria-hidden="true" class="role-icon">
+                    <svg viewbox="0 0 32 32">
+                      <path d="M16 3 27 8v7c0 7-4 12-11 15C9 27 5 22 5 15V8z"></path>
+                      <path d="m10 16 4 4 8-9"></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <h3>RISC Office</h3>
+                    <span class="role-type">
+                      International travel compliance approver
+                    </span>
+                    <span aria-hidden="true" class="expand-hint"></span>
+                  </span>
+                  <span aria-hidden="true" class="toggle-icon"></span>
+                </summary>
+                <div class="card-body">
+                  <div class="review-box secondary">
+                    <h4>What the RISC Office reviews</h4>
+                    <ul class="responsibility-list">
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Compliance with university international travel rules.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Compliance with sponsor requirements related to
+                          international travel.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether the destination is safe and approved.
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <p class="important-note">
+                    <svg aria-hidden="true" class="important-icon" viewbox="0 0 32 32">
+                      <path d="M16 3 30 28H2Z"></path>
+                      <line x1="16" x2="16" y1="11" y2="20"></line>
+                      <circle cx="16" cy="24" r="1.4"></circle>
+                    </svg>
+                    <span>
+                      <strong>Deny exception:</strong> The RISC Office is one of the limited roles authorized to deny a
+                      Spend Authorization. The Expense Partner may also deny a request containing a cash advance. Denial
+                      permanently ends the request, so a new Spend Authorization must be created.
+                    </span>
+                  </p>
+                </div>
+              </details>
+            </div>
+          </section>
+          <section aria-labelledby="financial-approvers-heading" class="approver-group">
+            <h2 class="approver-group-heading" id="financial-approvers-heading">Financial Approvers</h2>
+            <p class="approver-group-description">Workday routes each line according to its funding worktags. Each card
+              identifies the corresponding alternate approver when one is specified.</p>
+            <div class="card-grid">
+              <details class="role-card">
+                <summary class="card-summary">
+                  <span aria-hidden="true" class="role-icon">
+                    <svg viewbox="0 0 32 32">
+                      <circle cx="16" cy="16" r="12"></circle>
+                      <path d="M20 10h-6a4 4 0 0 0 0 8h4a4 4 0 0 1 0 8h-7"></path>
+                      <path d="M16 6v4M16 26v2"></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <h3>Cost Center Manager</h3>
+                    <span class="role-type">Financial approver for Designated funding · Alternate approver: College/Unit
+                      Finance Leader</span>
+                    <span aria-hidden="true" class="expand-hint"></span>
+                  </span>
+                  <span aria-hidden="true" class="toggle-icon"></span>
+                </summary>
+                <div class="card-body">
+                  <div class="review-box">
+                    <h4>What the Cost Center Manager reviews</h4>
+                    <ul class="responsibility-list">
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether the Designated worktag is an appropriate funding
+                          source.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>Whether the applicable budget is open.</span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>Whether sufficient funding is available.</span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether the related financial worktags align with the
+                          funding source.
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+              <details class="role-card">
+                <summary class="card-summary secondary">
+                  <span aria-hidden="true" class="role-icon">
+                    <svg viewbox="0 0 32 32">
+                      <path d="M6 27V12l10-7 10 7v15"></path>
+                      <path d="M11 27v-8h10v8M10 13h12"></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <h3>Grant Manager</h3>
+                    <span class="role-type">Financial approver for Grant funding · Alternate approver: Sponsored
+                      Programs Manager</span>
+                    <span aria-hidden="true" class="expand-hint"></span>
+                  </span>
+                  <span aria-hidden="true" class="toggle-icon"></span>
+                </summary>
+                <div class="card-body">
+                  <div class="review-box secondary">
+                    <h4>What the Grant Manager reviews</h4>
+                    <ul class="responsibility-list">
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether the travel is appropriately assigned to the
+                          Grant.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>Whether the award and budget are open.</span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>Whether sufficient funding is available.</span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether the expense is allowable under sponsor and award
+                          requirements.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether federally funded airfare meets applicable
+                          requirements when relevant.
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+              <details class="role-card">
+                <summary class="card-summary">
+                  <span aria-hidden="true" class="role-icon">
+                    <svg viewbox="0 0 32 32">
+                      <path d="M16 27S5 21 5 12a6 6 0 0 1 11-3 6 6 0 0 1 11 3c0 9-11 15-11 15z"></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <h3>Gift Manager</h3>
+                    <span class="role-type">Financial approver for Gift funding · Alternate approver: Dean Gift
+                      Manager</span>
+                    <span aria-hidden="true" class="expand-hint"></span>
+                  </span>
+                  <span aria-hidden="true" class="toggle-icon"></span>
+                </summary>
+                <div class="card-body">
+                  <div class="review-box">
+                    <h4>What the Gift Manager reviews</h4>
+                    <ul class="responsibility-list">
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether the travel is appropriately assigned to the Gift.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether the expense aligns with the donor-established
+                          purpose.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>Whether the applicable budget is open.</span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>Whether sufficient funding is available.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+              <details class="role-card">
+                <summary class="card-summary secondary">
+                  <span aria-hidden="true" class="role-icon">
+                    <svg viewbox="0 0 32 32">
+                      <path d="M4 26h24M7 26V10h18v16M11 10V6h10v4"></path>
+                      <path d="M11 16h4M18 16h4M11 21h4M18 21h4"></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <h3>Project Manager</h3>
+                    <span class="role-type">Financial approver for Project funding · Alternate approver: Not specified
+                      in this guide</span>
+                    <span aria-hidden="true" class="expand-hint"></span>
+                  </span>
+                  <span aria-hidden="true" class="toggle-icon"></span>
+                </summary>
+                <div class="card-body">
+                  <div class="review-box secondary">
+                    <h4>What the Project Manager reviews</h4>
+                    <ul class="responsibility-list">
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether the travel supports the Project’s defined
+                          purpose.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether the expense occurs within the Project’s
+                          established period.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether the Project and populated worktags are
+                          appropriate.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>Whether the applicable budget is open.</span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>Whether sufficient funding is available.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </section>
+          <section aria-labelledby="specialized-approvers-heading" class="approver-group">
+            <h2 class="approver-group-heading" id="specialized-approvers-heading">Specialized Approvers</h2>
+            <p class="approver-group-description">Workday adds these approval steps automatically when the request meets
+              the applicable condition.</p>
+            <div class="card-grid">
+              <details class="role-card">
+                <summary class="card-summary">
+                  <span aria-hidden="true" class="role-icon">
+                    <svg viewbox="0 0 32 32">
+                      <path d="M6 5h20v22H6z"></path>
+                      <path d="M10 11h12M10 16h12M10 21h7"></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <h3>C&amp;G Accountant</h3>
+                    <span class="role-type">
+                      Specialized award-line timing approval
+                    </span>
+                    <span aria-hidden="true" class="expand-hint"></span>
+                  </span>
+                  <span aria-hidden="true" class="toggle-icon"></span>
+                </summary>
+                <div class="card-body">
+                  <div class="review-box">
+                    <h4>What the C&amp;G Accountant reviews</h4>
+                    <ul class="responsibility-list">
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          The Budget Date that triggered specialized approval.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          The relationship between the Budget Date and Award Line
+                          End Date.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether the expense meets applicable award and timing
+                          requirements.
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <p class="important-note">
+                    <svg aria-hidden="true" class="important-icon" viewbox="0 0 32 32">
+                      <path d="M16 3 30 28H2Z"></path>
+                      <line x1="16" x2="16" y1="11" y2="20"></line>
+                      <circle cx="16" cy="24" r="1.4"></circle>
+                    </svg>
+                    <span>
+                      This approval is triggered when the Budget Date is within 90
+                      days of the Award Line End Date.
+                    </span>
+                  </p>
+                </div>
+              </details>
+              <details class="role-card">
+                <summary class="card-summary secondary">
+                  <span aria-hidden="true" class="role-icon">
+                    <svg viewbox="0 0 32 32">
+                      <path d="M16 4v24M7 9h18"></path>
+                      <path d="M9 9 4 18h10zM23 9l-5 9h10z"></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <h3>CAS Approver</h3>
+                    <span class="role-type">
+                      Cost Accounting Standards approval
+                    </span>
+                    <span aria-hidden="true" class="expand-hint"></span>
+                  </span>
+                  <span aria-hidden="true" class="toggle-icon"></span>
+                </summary>
+                <div class="card-body">
+                  <div class="review-box secondary">
+                    <h4>What the CAS Approver reviews</h4>
+                    <ul class="responsibility-list">
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          The grant conditions that triggered CAS approval.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          The account information associated with the expense.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether the proposed expense meets applicable Cost
+                          Accounting Standards requirements.
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+              <details class="role-card">
+                <summary class="card-summary">
+                  <span aria-hidden="true" class="role-icon">
+                    <svg viewbox="0 0 32 32">
+                      <path d="M5 27h22M8 27V14h16v13M11 14V8h10v6"></path>
+                      <path d="M14 27v-7h4v7"></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <h3>Construction Project Accountant</h3>
+                    <span class="role-type">
+                      Specialized construction-funding approval
+                    </span>
+                    <span aria-hidden="true" class="expand-hint"></span>
+                  </span>
+                  <span aria-hidden="true" class="toggle-icon"></span>
+                </summary>
+                <div class="card-body">
+                  <div class="review-box">
+                    <h4>What the accountant reviews</h4>
+                    <ul class="responsibility-list">
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          The construction project funding that triggered the
+                          approval.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether the travel expense is appropriate for the
+                          construction project.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether applicable project and accounting requirements
+                          are met.
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <p class="important-note">
+                    <svg aria-hidden="true" class="important-icon" viewbox="0 0 32 32">
+                      <path d="M16 3 30 28H2Z"></path>
+                      <line x1="16" x2="16" y1="11" y2="20"></line>
+                      <circle cx="16" cy="24" r="1.4"></circle>
+                    </svg>
+                    <span>
+                      The same task may appear more than once. Approving one
+                      instance automatically clears the duplicates.
+                    </span>
+                  </p>
+                </div>
+              </details>
+              <details class="role-card">
+                <summary class="card-summary secondary">
+                  <span aria-hidden="true" class="role-icon">
+                    <svg viewbox="0 0 32 32">
+                      <rect height="17" rx="3" width="24" x="4" y="8"></rect>
+                      <path d="M4 13h24M9 20h5"></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <h3>Expense Partner / Travel Office</h3>
+                    <span class="role-type">
+                      Specialized cash-advance approval
+                    </span>
+                    <span aria-hidden="true" class="expand-hint"></span>
+                  </span>
+                  <span aria-hidden="true" class="toggle-icon"></span>
+                </summary>
+                <div class="card-body">
+                  <div class="review-box secondary">
+                    <h4>What the Expense Partner reviews</h4>
+                    <ul class="responsibility-list">
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>The amount of the requested cash advance.</span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          The Cash Advance Justification and why cash is necessary.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether the cash advance appears on its own separate line.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether the request was submitted no more than 30 days
+                          before the trip begins.
+                        </span>
+                      </li>
+                      <li>
+                        <span aria-hidden="true" class="list-icon">✓</span>
+                        <span>
+                          Whether the requested amount and funding information are
+                          appropriate.
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <p class="important-note">
+                    <svg aria-hidden="true" class="important-icon" viewbox="0 0 32 32">
+                      <path d="M16 3 30 28H2Z"></path>
+                      <line x1="16" x2="16" y1="11" y2="20"></line>
+                      <circle cx="16" cy="24" r="1.4"></circle>
+                    </svg>
+                    <span>
+                      <strong>Deny exception:</strong> The Expense Partner may deny
+                      a Spend Authorization containing a cash advance. Denial
+                      permanently ends the request.
+                    </span>
+                  </p>
+                </div>
+              </details>
+            </div>
+          </section>
+        </div>
+      </section>
+    </div>
+    <!-- Workflow action glossary -->
+    <section aria-labelledby="actions-heading" class="glossary-section">
+      <div class="glossary-heading">
+        <h2 id="actions-heading">What the Workflow Actions Mean</h2>
+        <p>
+          Select the action that matches whether the request is accurate,
+          requires correction, or needs additional qualified review.
+        </p>
+      </div>
+      <dl class="glossary">
+        <div>
+          <dt>Submit</dt>
+          <dd>
+            Routes a completed Spend Authorization into the approval process.
+          </dd>
+        </div>
+        <div>
+          <dt>Save for Later</dt>
+          <dd>
+            Retains unfinished entry or edits so the authorized participant can
+            return later.
+          </dd>
+        </div>
+        <div>
+          <dt>Approve</dt>
+          <dd>
+            Completes the current review and routes the request to the next
+            required step.
+          </dd>
+        </div>
+        <div>
+          <dt>Send Back</dt>
+          <dd>
+            Returns the request for correction. A comment explaining what must
+            be corrected is required.
+          </dd>
+        </div>
+        <div>
+          <dt>Add Approvers</dt>
+          <dd>
+            Records the current approval and sends a correct request to another
+            qualified reviewer.
+          </dd>
+        </div>
+        <div>
+          <dt>Cancel Task</dt>
+          <dd>
+            Exits an approval task without acting. The task remains in My
+            Tasks.
+          </dd>
+        </div>
+        <div>
+          <dt>Deny</dt>
+          <dd>
+            Permanently ends the request. A denied Spend Authorization cannot
+            be corrected and resubmitted.
+          </dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+  <script>
+    /*
+      Accessible tabs:
+      - Click to select
+      - Left and Right Arrow move between tabs
+      - Home selects the first tab
+      - End selects the last tab
+    */
+    const tabList = document.querySelector('[role="tablist"]');
+    const tabs = Array.from(tabList.querySelectorAll('[role="tab"]'));
+    const tabPanels = Array.from(
+      document.querySelectorAll('[role="tabpanel"]')
+    );
+
+    function activateTab(selectedTab, moveFocus = true) {
+      tabs.forEach((tab) => {
+        const isSelected = tab === selectedTab;
+
+        tab.setAttribute("aria-selected", String(isSelected));
+        tab.tabIndex = isSelected ? 0 : -1;
+
+        const panelId = tab.getAttribute("aria-controls");
+        const panel = document.getElementById(panelId);
+
+        panel.hidden = !isSelected;
+      });
+
+      if (moveFocus) {
+        selectedTab.focus();
+      }
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        activateTab(tab, false);
+      });
+
+      tab.addEventListener("keydown", (event) => {
+        const currentIndex = tabs.indexOf(tab);
+        let nextIndex = currentIndex;
+
+        switch (event.key) {
+          case "ArrowRight":
+          case "ArrowDown":
+            nextIndex = (currentIndex + 1) % tabs.length;
+            break;
+
+          case "ArrowLeft":
+          case "ArrowUp":
+            nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+            break;
+
+          case "Home":
+            nextIndex = 0;
+            break;
+
+          case "End":
+            nextIndex = tabs.length - 1;
+            break;
+
+          default:
+            return;
+        }
+
+        event.preventDefault();
+        activateTab(tabs[nextIndex]);
+      });
+    });
+
+    /*
+      Expand every role tile and display every tab panel for printing.
+      Restore the previous interface state after printing.
+    */
+    const roleCards = Array.from(
+      document.querySelectorAll("details.role-card")
+    );
+
+    let previouslyOpenCards = [];
+    let previouslySelectedTab = null;
+
+    window.addEventListener("beforeprint", () => {
+      previouslyOpenCards = roleCards.filter((card) => card.open);
+      previouslySelectedTab = tabs.find(
+        (tab) => tab.getAttribute("aria-selected") === "true"
+      );
+
+      roleCards.forEach((card) => {
+        card.open = true;
+      });
+
+      tabPanels.forEach((panel) => {
+        panel.hidden = false;
+      });
+    });
+
+    window.addEventListener("afterprint", () => {
+      roleCards.forEach((card) => {
+        card.open = previouslyOpenCards.includes(card);
+      });
+
+      if (previouslySelectedTab) {
+        activateTab(previouslySelectedTab, false);
+      }
+    });
+  </script>
+</body>
+
+</html>
